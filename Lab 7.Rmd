@@ -14,3 +14,16 @@ This is Corinna's first message
 Hi! This is Camila, so glad this is all working!
 
 Woohoo! Teamwork makes the dream work
+
+```{r}
+library(tidyverse)
+kermit <- read_csv("kermit.csv")
+
+kermit_hist <- ggplot(kermit, aes(x = Score.pre))+
+  geom_histogram(bins = 4)+
+  facet_wrap(~Gender)
+
+kermit_hist
+
+```
+
